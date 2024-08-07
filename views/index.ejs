@@ -31,10 +31,12 @@
        
         <div class="box">
             <% if(locals.task){ %>
-               <% task.forEach((i)=>{ %>
+               <% for(let item of task){ %>
                 <form action="/delete" method="post">
 
-              <div class="task">  <input type="checkbox" class="checkbox"> <input type="text" class="text txtbox" name="item" value="<%= i %>"> 
+              <div class="task">  <input type="checkbox" class="checkbox" >
+                <input type="hidden" name="itemId" value="<%= item.id %>">
+                 <input type="text" class="text txtbox" name="itemTitle" value="<%= item.title %>"> 
                 <button type="submit" class="btn btn-outline-danger  deletes" ></form>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
                 <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5
@@ -44,7 +46,7 @@
               </svg></button>
                 
             </div><hr>
-            <% }); %>
+            <% } %>
                  <% };%>
     </div></div></main>
    
