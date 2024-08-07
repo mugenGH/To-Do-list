@@ -15,6 +15,13 @@
 <body>
  <header> <div class="calendar">
     <h3 class="quote"><%= quote %> <p>- <%= author %></p></h3>
+
+    <div class="d-flex  flex-column">
+      <h3 class="me-3 "><%= name %></h3>
+   <div> <form action="/getUser" method="post"><div class="d-flex mb-3" ><input type="text" class="user rounded" placeholder="<%= locals.error?error:"Enter  user name " %>" name="userName"><input class="btn btn-primary mb-2" value="get tasks" type="submit"></div></form></div>
+  <a href="/newUser" class="link">new user +</a>
+  </div>
+    
     <iframe  src="https://calendar.google.com/calendar/embed?height=150&wkst=1&ctz=Asia%2FKolkata&bgcolor=%23dca47c&showNav=0&showTitle=0&showTabs=0&showCalendars=0&showPrint=0&showTz=0&mode=MONTH&title=to%20do%
     20list&src=ZW4uaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&
     src=ZW4tZ2IuaW5kaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%230B8043&color=%230B8043" 
