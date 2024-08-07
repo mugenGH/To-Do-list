@@ -5,6 +5,8 @@ import path from 'path';  // Import path module
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import pg from "pg";
+import dotenv from "dotenv";
+dotenv.config();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
