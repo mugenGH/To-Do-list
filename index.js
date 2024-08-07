@@ -78,7 +78,7 @@ app.post("/addUser", async (req,res)=>{
   const id= await db.query("INSERT INTO users (name) VALUES ($1) returning id ",[userName]);
   currentUser=id.rows[0].id;
   res.redirect("/");}catch(error){
-    res.render("newUser.ejs",{error:"user already exist"});
+    res.render("newUser",{error:"user already exist"});
   }
 })
 app.post("/getUser", async (req,res)=>{
@@ -102,7 +102,7 @@ try{
 })
 
 app.get("/newUser",(req,res)=>{
-  res.render("newUser.ejs");
+  res.render("newUser");
 })
 
 app.listen(port, () => {
