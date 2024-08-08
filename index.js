@@ -23,7 +23,7 @@ const db = new pg.Client({
   user:process.env.DB_USER || "postgres",
   host:process.env.DB_HOST || "localhost",
   database: process.env.DB_DATABASE || "todolist",
-  password: process.env.DB_PASSWORD || "123456",
+  password: process.env.DB_PASSWORD || "123456", 
   port: process.env.DB_PORT || 5432,
 });
 db.connect();
