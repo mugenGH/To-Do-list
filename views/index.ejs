@@ -30,7 +30,7 @@
    <main><img src="Animation - 1720006012770 (1).gif" alt="working man" style=" width: 300px; padding-left: 100px;">
     <div class="lists "><div class="day"><% if(locals.day && locals.month){ %><h1><%= day %>,<%= new Date().getDate() %> <%=month %></h1><% }; %></div>
     <div class="bar">
-      <form action="/submit" method="post">  <input type="text" name="input" class="input" placeholder="Enter new task" required>
+      <form action="/submit" method="post">  <input type="text" name="input" class="input" placeholder="<%= locals.Terror?Terror:"Enter task " %>" required>
         <button type="submit" class="btnc"><span class="material-symbols-outlined" style="margin-top: 5px;">
             add
             </span></button>

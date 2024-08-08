@@ -63,9 +63,21 @@ async function getName() {
     });
   }); 
 app.post("/submit",async(req,res)=>{ 
+  if(currentUser==1){
+    const quotes=randomQuotes.default();
+    res.render("index",{
+      quote: quotes["body"] ,
+      author:quotes["author"],
+      task: tasks,
+      name:currentUserName,
+      Terror:"plese enter user name",
+        day:allDay[day],
+        month : allMonth[month]
+    });
+  }else{
  const task =req.body["input"];
 await db.query("INSERT INTO tasks (title,user_id) VALUES ($1,$2)",[task,currentUser]);
-res.redirect("/");
+res.redirect("/")}
 });
 
 app.post("/delete",async(req,res)=>{
