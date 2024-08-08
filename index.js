@@ -20,11 +20,11 @@ app.set('views', path.join(__dirname, 'views'));
 
 const port = 3000;
 const db = new pg.Client({
-  user:process.env.DB_USER || "postgres",
-  host:process.env.DB_HOST || "localhost",
-  database: process.env.DB_DATABASE || "todolist",
-  password: process.env.DB_PASSWORD || "123456", 
-  port: process.env.DB_PORT || 5432,
+  user: 'todolist_spm6_user',
+  host: 'dpg-cqq4drogph6c73848lo0-a.oregon-postgres.render.com',
+  database: 'todolist_spm6',
+  password: 'YC11pweo54qDIt7XSsDwvyT724Pb0PCv',
+  port: 5432,
 });
 db.connect();
 
