@@ -25,6 +25,9 @@ const db = new pg.Client({
   database: 'todolist_spm6',
   password: 'YC11pweo54qDIt7XSsDwvyT724Pb0PCv',
   port: 5432,
+  ssl: {
+    rejectUnauthorized: false // Optional: set to true if you want to enforce certificate validation
+  }
 });
 db.connect();
 
